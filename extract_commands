@@ -1,0 +1,6 @@
+Command to Extract Commit Hash for bm4prod01:0.1.3:
+ostree log --repo=/home/ostree/dev-ota.barcindia.in/ostree/repo bm4prod01 | awk '/bm4prod01:0.1.3/,/commit / {if ($1=="commit") print $2}'
+Save the Commit Hash to a File:
+ostree log --repo=/home/ostree/dev-ota.barcindia.in/ostree/repo bm4prod01 | awk '/bm4prod01:0.1.3/,/commit / {if ($1=="commit") print $2}' > commit_hash_bm4prod01_0.1.3.txt
+command to extract details for particular version from branch
+ostree log --repo=/home/ostree/dev-ota.barcindia.in/ostree/repo bm4prod01 | awk '/bm4prod01:0.1.3/,/commit /'
