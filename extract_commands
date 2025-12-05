@@ -5,7 +5,7 @@ ostree log --repo=/home/ostree/dev-ota.barcindia.in/ostree/repo bm4prod01 | awk 
 command to extract details for particular version from branch
 ostree log --repo=/home/ostree/dev-ota.barcindia.in/ostree/repo bm4prod01 | awk '/bm4prod01:0.1.3/,/commit /'
 
-
+ostree log --repo=/home/ostree/dev-ota.barcindia.in/ostree/repo bm4prod01 | awk '/^commit / {commit=$2} /bm4prod01:0.1.5/ {print commit}'
 
 curl --location 'https://10.10.8.34:8085/api/publishlinuxota' \
 --header 'Content-Type: application/json' \
