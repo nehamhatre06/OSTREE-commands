@@ -14,3 +14,11 @@ curl --location 'https://10.10.8.34:8085/api/publishlinuxota' \
   "buildBranch": "bm4prod01",
   "buildVersion": "0.1.3"
 }'
+
+
+
+meter@BARCMUMVCKAFKA:~/.local/share/meter-ca$ cat client.cnf
+[ ssl_client ]
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage = clientAuth
+meter@BARCMUMVCKAFKA:~/.local/share/meter-ca$
